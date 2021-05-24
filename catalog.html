@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Седона: Каталог</title>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">
+        <img src="https://via.placeholder.com/138x70" alt="Логотип Седона" width="138" height="70">
+      </a>
+      <ul>
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a>Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1>Жильё в Седоне</h1>
+
+    <section>
+      <h2>Фильтр жилья</h2>
+
+      <form action="https://echo.htmlacademy.ru/" method="POST">
+        <fieldset>
+          <legend>ИНФРАСТРУКТУРА:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="pool" id="filter-pool" checked>
+              <label for="filter-pool">БАССЕЙН</label>
+            </li>
+            <li>
+              <input type="checkbox" name="parking" id="filter-parking">
+              <label for="filter-parking">ПАРКОВКА</label>
+            </li>
+            <li>
+              <input type="checkbox" name="wifi" id="filter-wifi">
+              <label for="filter-wifi">WI-FI</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>ТИП ЖИЛЬЯ:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="hotel" id="filter-hotel" checked>
+              <label for="filter-hotel">ГОСТИНИЦА</label>
+            </li>
+            <li>
+              <input type="checkbox" name="motel" id="filter-motel" checked>
+              <label for="filter-motel">МОТЕЛЬ</label>
+            </li>
+            <li>
+              <input type="checkbox" name="apartments" id="filter-apartments" checked>
+              <label for="filter-apartments">АППАРТАМЕНТЫ</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>стоимость в сутки, &#8381;</legend>
+          <ul>
+            <li><input type="number" name="min-price" placeholder="от 0"></li>
+            <li><input type="number" name="max-price" placeholder="до 3000"></li>
+            <li><input type="range" min="1" max="3000"></li>
+          </ul>
+        </fieldset>
+
+        <button>Показать</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Список доступного жилья</h2>
+
+      <h3>Найдено: 3</h3>
+      <ul>
+        <li>Сортировка:</li>
+        <li><a href="#">По цене</a></li>
+        <li><a href="#">По типу</a></li>
+        <li><a href="#">По рейтингу</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">&#9650;</a></li>
+        <li><a href="#">&#9660;</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#">
+            <h3>Amara Resort & Spa</h3>
+          </a>
+          <img src="https://via.placeholder.com/135x90" alt="" width="135" height="90">
+          <p>
+            гостиница от 4000 &#8381;
+          </p>
+          <p>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+          </p>
+          <p>
+            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+          </p>
+          <p>
+            Рейтинг: 8,5
+          </p>
+        </li>
+        <li>
+          <a href="#">
+            <h3>Desert Quail Inn</h3>
+          </a>
+          <img src="https://via.placeholder.com/135x90" alt="" width="135" height="90">
+          <p>
+            Мотель от 3000 &#8381;
+          </p>
+          <p>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+          </p>
+          <p>
+            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+          </p>
+          <p>
+            Рейтинг: 8,9
+          </p>
+        </li>
+        <li>
+          <a href="#">
+            <h3>Villas at Poco Diablo</h3>
+          </a>
+          <img src="https://via.placeholder.com/135x90" alt="" width="135" height="90">
+          <p>
+            Апартаменты От 2000 &#8381;
+          </p>
+          <p>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+          </p>
+          <p>
+            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+          </p>
+          <p>
+            Рейтинг: 9,2
+          </p>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+
+    <section>
+      <h2>Контактная информация</h2>
+      <p>
+        <span>#visitSEDONA</span>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Наши соцсети</h2>
+      <ul>
+        <li>
+          <a href="https://twitter.com/htmlacademy_ru" target="_blank">
+            <img src="https://via.placeholder.com/25x25" width="25" height="25" alt="twitter">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/htmlacademy/" target="_blank">
+            <img src="https://via.placeholder.com/25x25" width="25" height="25" alt="facebook">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <img src="https://via.placeholder.com/25x25" width="25" height="25" alt="youtube">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Разработано</h2>
+      <p>
+        <span>Website by</span>
+        <a href="https://htmlacademy.ru/" target="_blank">
+          <img src="https://via.placeholder.com/25x25" width="25" height="25" alt="htmlacademy">
+        </a>
+      </p>
+    </section>
+
+  </footer>
+
+</body>
+
+</html>
