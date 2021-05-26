@@ -4,6 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>Седона: Каталог</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png" type="image/x-icon">
+  <link rel="manifest" href="manifest.webmanifest.json">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -11,7 +16,7 @@
   <header>
     <nav>
       <a href="index.html">
-        <img src="https://via.placeholder.com/138x70" alt="Логотип Седона" width="138" height="70">
+        <img src="img/content/sedona-logo.svg" width="138" height="70" alt="Синий логотип с текстом city of sedona">
       </a>
       <ul>
         <li><a href="#">Информация</a></li>
@@ -73,7 +78,7 @@
           </ul>
         </fieldset>
 
-        <button>Показать</button>
+        <button type=“submit”>Показать</button>
       </form>
     </section>
 
@@ -88,15 +93,27 @@
         <li><a href="#">По рейтингу</a></li>
       </ul>
       <ul>
-        <li><a href="#">&#9650;</a></li>
-        <li><a href="#">&#9660;</a></li>
+        <li>
+          <a href="#">
+            <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0h11" fill="#CACACA" />
+            </svg>
+          </a>
+        </li>
       </ul>
       <ul>
         <li>
           <a href="#">
             <h3>Amara Resort & Spa</h3>
           </a>
-          <img src="https://via.placeholder.com/135x90" alt="" width="135" height="90">
+          <img src="img/content/card-amara.jpg" width="135" height="90" alt="гостиница на фоне гор">
           <p>
             гостиница от 4000 &#8381;
           </p>
@@ -105,10 +122,7 @@
             <a href="#">Забронировать</a>
           </p>
           <p>
-            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
-            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
-            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
-            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+            <img src="img/decor/star-four.svg" width="90" height="17" alt="четырёхзвёздочная гостиница">
           </p>
           <p>
             Рейтинг: 8,5
@@ -118,7 +132,7 @@
           <a href="#">
             <h3>Desert Quail Inn</h3>
           </a>
-          <img src="https://via.placeholder.com/135x90" alt="" width="135" height="90">
+          <img src="img/content/card-desert.jpg"" width=" 135" height="90" alt="мотель у дороги">
           <p>
             Мотель от 3000 &#8381;
           </p>
@@ -127,9 +141,7 @@
             <a href="#">Забронировать</a>
           </p>
           <p>
-            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
-            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
-            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+            <img src="img/decor/star-three.svg" width="66" height="17" alt="трёхзвёздочная гостиница">
           </p>
           <p>
             Рейтинг: 8,9
@@ -139,7 +151,7 @@
           <a href="#">
             <h3>Villas at Poco Diablo</h3>
           </a>
-          <img src="https://via.placeholder.com/135x90" alt="" width="135" height="90">
+          <img src="img/content/card-villas.jpg" width="135" height="90" alt="аппартаменты на зеленом лугу">
           <p>
             Апартаменты От 2000 &#8381;
           </p>
@@ -148,8 +160,7 @@
             <a href="#">Забронировать</a>
           </p>
           <p>
-            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
-            <img src="https://via.placeholder.com/25x25" alt="" width="25" height="25">
+            <img src="img/decor/star-two.svg" width="41" height="17" alt="двухзвёздочная гостиница">
           </p>
           <p>
             Рейтинг: 9,2
@@ -175,17 +186,17 @@
       <ul>
         <li>
           <a href="https://twitter.com/htmlacademy_ru" target="_blank">
-            <img src="https://via.placeholder.com/25x25" width="25" height="25" alt="twitter">
+            <img src="img/social/twitter-icon.svg" width="17" height="17" alt="мы в twitter">
           </a>
         </li>
         <li>
           <a href="https://www.facebook.com/htmlacademy/" target="_blank">
-            <img src="https://via.placeholder.com/25x25" width="25" height="25" alt="facebook">
+            <img src="img/social/fb-icon.svg" width="12" height="22" alt="мы в facebook">
           </a>
         </li>
         <li>
           <a href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-            <img src="https://via.placeholder.com/25x25" width="25" height="25" alt="youtube">
+            <img src="img/social/youtube-icon.svg" width="20" height="16" alt="мы в youtube">
           </a>
         </li>
       </ul>
@@ -196,7 +207,7 @@
       <p>
         <span>Website by</span>
         <a href="https://htmlacademy.ru/" target="_blank">
-          <img src="https://via.placeholder.com/25x25" width="25" height="25" alt="htmlacademy">
+          <img src="img/content/htmlacademy-logo.svg" width="115" height="33.03" alt="htmlacademy">
         </a>
       </p>
     </section>
