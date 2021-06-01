@@ -1,0 +1,234 @@
+:root {
+  --black-color: #000000;
+  --blue-color: #81b3d2;
+  --brown-color: #766357;
+  --grey-color: #333333;
+  --lite-grey-color: #eeeeee;
+  --white-color: #ffffff;
+}
+
+/* общие стили */
+
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: var(--grey-color);
+  text-transform: uppercase;
+
+  background-color: var(--white-color);
+  background-position: top center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.general-title {
+  font-size: 21px;
+  color: var(--black-color);
+}
+
+.general-list {
+  list-style: none;
+}
+
+/* Навигация по сайту */
+
+.site-navigation-current a:not([href]) {
+  color: var(--brown-color);
+}
+
+.navigation-item {
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+.navigation-item:hover {
+  color: var(--blue-color);
+}
+
+.navigation-item:active {
+  color: var(--black-color);
+
+  opacity: 0.3;
+}
+
+.navigation-item:focus {
+  color: var(--brown-color);
+}
+
+/* Стили главной страницы */
+
+.promo {
+  width: 1200px;
+  height: 509px;
+
+  line-height: 26px;
+
+  background-color: #6d869c;
+  background-image: url(/img/decor/background-photo.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+/* Секция особеностей */
+
+.features {
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.features-item {
+  text-align: center;
+}
+
+.extra-features {
+  width: 400px;
+  height: 256px;
+
+  color: var(--white-color);
+
+  background-color: var(--blue-color);
+}
+
+.extra-features h3 {
+  color: var(--white-color);
+}
+
+.more-features {
+  background-color: var(--lite-grey-color);
+}
+
+/* Секция поиска гостиниц */
+
+.hotel-search {
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.hotel-search h3 {
+  font-size: 30px;
+}
+
+/* Стили страницы каталога */
+
+.filter-check-block {
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+
+  background-color: #47617b;
+  background-image: url(/img/decor/background-photo-catalog.jpg);
+  background-repeat: no-repeat;
+}
+
+.filter-check-block legend {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.filter-range input[placeholder] {
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.filter-catalog-block {
+  font-weight: 400;
+  line-height: 21px;
+}
+
+/* filter sorting */
+
+.filter-sorting {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.filter-sorting-item {
+  color: var(--black-color);
+}
+
+/* filter up-down */
+
+.filter-up-duwn {
+  fill: #cacaca;
+}
+.filter-up-duwn a:hover {
+  fill: #000000;
+}
+.filter-up-duwn a:focus {
+  fill: #81b3d2 ;
+}
+.filter-up-duwn a:active {
+  fill: #81b3d2 ;
+}
+
+/* buttons */
+
+.button {
+  display: inline-block;
+
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.button-booking {
+  width: 142px;
+  height: 27px;
+
+  background-color: #766357;
+}
+
+.button-description {
+  width: 110px;
+  height: 27px;
+
+  background: #81b3d2;
+}
+
+.button-filter {
+  width: 127px;
+  height: 36px;
+
+  font-weight: 400;
+
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #ffffff;
+}
+
+.button-big {
+  width: 568px;
+  height: 86px;
+
+  font-size: 21px;
+  line-height: 26px;
+
+  background-color: #766357;
+}
+
+/* класс скрывающий семантические элементы в разметке которых нет в макете */
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+}
