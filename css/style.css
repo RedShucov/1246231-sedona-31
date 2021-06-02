@@ -94,7 +94,7 @@ a {
 
 .background-bottom {
   width: inherit;
-  height: inherit;
+  height: 510px;
 
   background-image: url(../img/decor/background-bottom.png);
   background-repeat: no-repeat;
