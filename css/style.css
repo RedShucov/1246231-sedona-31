@@ -22,7 +22,6 @@
   text-transform: uppercase;
 
   background-color: var(--white-color);
-  background-position: top center;
 }
 
 img {
@@ -71,15 +70,35 @@ a {
 /* Стили главной страницы */
 
 .promo {
+  line-height: 26px;
+}
+
+.background-main {
   width: 1200px;
   height: 509px;
 
-  line-height: 26px;
-
   background-color: #6d869c;
-  background-image: url(/img/decor/background-photo.jpg);
+  background-image: url(../img/decor/background-photo.jpg);
   background-repeat: no-repeat;
   background-position: top center;
+}
+
+.background-logo {
+  width: inherit;
+  height: inherit;
+
+  background-image: url(../img/decor/background-logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-bottom {
+  width: inherit;
+  height: inherit;
+
+  background-image: url(../img/decor/background-bottom.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 /* Секция особеностей */
@@ -129,7 +148,7 @@ a {
   color: #ffffff;
 
   background-color: #47617b;
-  background-image: url(/img/decor/background-photo-catalog.jpg);
+  background-image: url(../img/decor/background-photo-catalog.jpg);
   background-repeat: no-repeat;
 }
 
