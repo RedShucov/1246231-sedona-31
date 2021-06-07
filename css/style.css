@@ -89,28 +89,10 @@ a {
   width: 1200px;
   height: 509px;
 
-  background-color: var(--background-main);
-  background-image: url(../img/decor/background-photo.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-.background-logo {
-  width: inherit;
-  height: inherit;
-
-  background-image: url(../img/decor/background-logo.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.background-bottom {
-  width: inherit;
-  height: 510px;
-
-  background-image: url(../img/decor/background-bottom.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
+  background:
+  url(../img/decor/background-logo.svg) no-repeat 50%,
+  url(../img/decor/background-bottom.png) no-repeat bottom,
+  url(../img/decor/background-photo.jpg);
 }
 
 /* Секция особеностей */
