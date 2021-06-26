@@ -22,7 +22,9 @@
 /* общие стили */
 
 .page-body {
-  min-width: 960px;
+  display: grid;
+  min-width: 1200px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
 
@@ -34,6 +36,10 @@
   text-transform: uppercase;
 
   background-color: var(--white-color);
+}
+
+.page {
+  height: 100%;
 }
 
 img {
@@ -89,8 +95,7 @@ a {
   width: 1200px;
   height: 509px;
 
-  background:
-  url(../img/decor/background-logo.svg) no-repeat 50%,
+  background: url(../img/decor/background-logo.svg) no-repeat 50%,
   url(../img/decor/background-bottom.png) no-repeat bottom,
   url(../img/decor/background-photo.jpg);
 }
@@ -192,8 +197,6 @@ a {
 /* buttons */
 
 .button {
-  display: inline-block;
-
   font-weight: 700;
   line-height: 21px;
   text-align: center;
@@ -244,4 +247,36 @@ a {
   margin: -1px;
 
   clip: rect(0 0 0 0);
+}
+
+/* сетка */
+
+.grid-container {
+  display: grid;
+  width: 1200px;
+  margin: 0 auto;
+
+  grid-template-columns: 73px 127px repeat(4, 200px) 127px 73px;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.grid-header {
+  grid-column-end: -1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+}
+
+.grid-content {
+  grid-column-end: -1;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-row-start: 2;
+}
+
+.grid-footer {
+  grid-column-end: -1;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  grid-row-start: 3;
 }
