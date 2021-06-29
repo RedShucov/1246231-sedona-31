@@ -11,7 +11,7 @@
   --brown-color: #766357;
   /* цвет подзаголовков */
   --grey-color: #333333;
-  /* бэкграунд последнего списка преимуществ */
+  /* бэкграунд последнего списка преимуществ, так же бэк-граунд сайта */
   --lite-grey-color: #eeeeee;
   /* основной белый цвет сайта */
   --white-color: #ffffff;
@@ -35,7 +35,7 @@
   color: var(--grey-color);
   text-transform: uppercase;
 
-  background-color: var(--white-color);
+  background-color: var(--lite-grey-color);
 }
 
 .page {
@@ -60,7 +60,51 @@ a {
   list-style: none;
 }
 
+/* Grid сетка*/
+
+.grid-container {
+  display: grid;
+  min-width: 1200px;
+  margin: 0 auto;
+
+  background-color: var(--white-color);
+  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+
+  grid-template-columns: 73px 127px repeat(4, 200px) 127px 73px;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.grid-header {
+  grid-column-end: -1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+}
+
+.grid-content {
+  grid-column-end: -1;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-row-start: 2;
+}
+
+.grid-footer {
+  grid-column-end: -1;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  grid-row-start: 3;
+}
+
 /* Навигация по сайту */
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+}
+
+/* .site-navigation li {
+  display: inline;
+} */
 
 .site-navigation-current a:not([href]) {
   color: var(--brown-color);
@@ -100,6 +144,11 @@ a {
   url(../img/decor/background-photo.jpg);
 }
 
+.promo div h3,
+.promo div p {
+  text-align: center;
+}
+
 /* Секция особеностей */
 
 .features {
@@ -111,16 +160,39 @@ a {
   text-align: center;
 }
 
-.extra-features {
-  width: 400px;
-  height: 256px;
+.features-list {
+  display: grid;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 
-  color: var(--white-color);
-
-  background-color: var(--blue-color);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 256px;
 }
 
-.extra-features h3 {
+.extra-features-wrapper {
+  display: grid;
+  height: 256px;
+
+  background-color: var(--blue-color);
+
+  grid-template-columns: 1fr auto;
+}
+
+.extra-features-item-wrapper {
+  align-self: center;
+  width: 400px;
+}
+
+div + .extra-features-wrapper .extra-features-item-wrapper {
+  order: 2;
+}
+
+.extra-features-item {
+  color: var(--white-color);
+}
+
+.extra-features-item h3 {
   color: var(--white-color);
 }
 
@@ -131,12 +203,27 @@ a {
 /* Секция поиска гостиниц */
 
 .hotel-search {
+  margin-top: 56px;
+
   font-weight: 400;
   line-height: 24px;
+  text-align: center;
 }
 
 .hotel-search h3 {
   font-size: 30px;
+}
+
+/* footer */
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-social {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
 }
 
 /* Стили страницы каталога */
@@ -247,36 +334,4 @@ a {
   margin: -1px;
 
   clip: rect(0 0 0 0);
-}
-
-/* сетка */
-
-.grid-container {
-  display: grid;
-  width: 1200px;
-  margin: 0 auto;
-
-  grid-template-columns: 73px 127px repeat(4, 200px) 127px 73px;
-  grid-template-rows: min-content 1fr min-content;
-}
-
-.grid-header {
-  grid-column-end: -1;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-row-start: 1;
-}
-
-.grid-content {
-  grid-column-end: -1;
-  grid-column-start: 1;
-  grid-row-end: 3;
-  grid-row-start: 2;
-}
-
-.grid-footer {
-  grid-column-end: -1;
-  grid-column-start: 1;
-  grid-row-end: 4;
-  grid-row-start: 3;
 }
