@@ -36,10 +36,21 @@
   text-transform: uppercase;
 
   background-color: var(--lite-grey-color);
+
+  grid-template-rows: min-content 1fr min-content;
 }
 
 .page {
   height: 100%;
+}
+
+.center {
+  width: 1200px;
+  margin: 0 auto;
+
+  background-color: var(--white-color);
+  box-shadow: 10px 0 8px -3px rgba(221, 221, 221, 1),
+  -10px 0 8px -3px rgba(221, 221, 221, 1);
 }
 
 img {
@@ -58,41 +69,6 @@ a {
 
 .general-list {
   list-style: none;
-}
-
-/* Grid сетка*/
-
-.grid-container {
-  display: grid;
-  min-width: 1200px;
-  margin: 0 auto;
-
-  background-color: var(--white-color);
-  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-
-  grid-template-columns: 73px 127px repeat(4, 200px) 127px 73px;
-  grid-template-rows: min-content 1fr min-content;
-}
-
-.grid-header {
-  grid-column-end: -1;
-  grid-column-start: 1;
-  grid-row-end: 2;
-  grid-row-start: 1;
-}
-
-.grid-content {
-  grid-column-end: -1;
-  grid-column-start: 1;
-  grid-row-end: 3;
-  grid-row-start: 2;
-}
-
-.grid-footer {
-  grid-column-end: -1;
-  grid-column-start: 1;
-  grid-row-end: 4;
-  grid-row-start: 3;
 }
 
 /* Навигация по сайту */
@@ -144,8 +120,7 @@ a {
   url(../img/decor/background-photo.jpg);
 }
 
-.promo div h3,
-.promo div p {
+.promo-wrapper {
   text-align: center;
 }
 
@@ -182,18 +157,17 @@ a {
 .extra-features-item-wrapper {
   align-self: center;
   width: 400px;
+
+  text-align: center;
+  color: var(--white-color);
 }
 
-div + .extra-features-wrapper .extra-features-item-wrapper {
+.extra-features-item-wrapper h3 {
+  color: var(--white-color);
+}
+
+.extra-item-right {
   order: 2;
-}
-
-.extra-features-item {
-  color: var(--white-color);
-}
-
-.extra-features-item h3 {
-  color: var(--white-color);
 }
 
 .more-features {
@@ -216,7 +190,7 @@ div + .extra-features-wrapper .extra-features-item-wrapper {
 
 /* footer */
 
-.grid-footer {
+.footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
