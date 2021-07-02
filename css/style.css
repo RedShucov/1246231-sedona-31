@@ -71,6 +71,10 @@ a {
   list-style: none;
 }
 
+.general-list li {
+  display: inline;
+}
+
 /* Навигация по сайту */
 
 .site-navigation {
@@ -223,7 +227,7 @@ a {
   background-color: var(--white-color-clear);
 }
 
-.filter-catalog-block {
+.catalog-block {
   font-weight: 400;
   line-height: 21px;
 }
@@ -309,3 +313,30 @@ a {
 
   clip: rect(0 0 0 0);
 }
+
+/*  */
+
+.filter-check-block {
+  height: 217px;
+}
+
+.filtration-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.filter-catalog-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.filter-sorting {
+  justify-self: start;
+}
+
+.filter-up-duwn {
+  justify-self: end;
+  display: flex;
+}
+
+
