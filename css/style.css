@@ -53,6 +53,10 @@
   -10px 0 8px -3px rgba(221, 221, 221, 1);
 }
 
+.center-inner {
+  margin: 0 73px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -73,11 +77,47 @@ a {
 
 /* Навигация по сайту */
 
-.site-navigation {
-  margin: 0;
-  padding: 0;
+.main-navigation {
+  display: flex;
+  justify-content: center;
+  height: 56px;
 }
 
+.main-header-logo {
+  position: absolute;
+}
+
+.site-navigation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-navigation li {
+  margin-right: auto;
+}
+
+.site-navigation li:nth-child(1) {
+  margin-right: 134px;
+}
+
+.site-navigation li:nth-child(2) {
+  margin-right: 209px;
+}
+
+.site-navigation li:nth-child(3) {
+  margin-left: 209px;
+}
+
+.site-navigation li:nth-child(4) {
+  margin-right: 0;
+}
+
+/* логика элементов меню навигации */
 .site-navigation-current a:not([href]) {
   color: var(--brown-color);
 }
