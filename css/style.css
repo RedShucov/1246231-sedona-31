@@ -78,13 +78,17 @@ a {
 /* Навигация по сайту */
 
 .main-navigation {
+  position: relative;
+
   display: flex;
-  justify-content: center;
   height: 56px;
 }
 
 .main-header-logo {
   position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
 }
 
 .site-navigation {
@@ -182,12 +186,10 @@ a {
 }
 
 .extra-features-wrapper {
-  display: grid;
+  display: flex;
   height: 256px;
 
   background-color: var(--blue-color);
-
-  grid-template-columns: 1fr auto;
 }
 
 .extra-features-item-wrapper {
