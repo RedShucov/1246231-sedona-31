@@ -59,9 +59,8 @@
   padding: 0 73px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+ul {
+  padding: 0;
 }
 
 a {
@@ -403,6 +402,149 @@ a {
   fill: var(--blue-color) ;
 }
 
+/* карточки товара */
+
+.catalog-item:first-child {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.catalog-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.card {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 21px;
+  padding-bottom: 30px;
+  /* padding: 30px 0; */
+}
+
+.card h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.card-image {
+  display: block;
+}
+
+.card .column-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.card .row-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card .row-2 {
+  display: flex;
+  width: 100%;
+  margin-top: 7px;
+  margin-bottom: 18.5px;
+}
+
+.card .row-2 span {
+  width: 110px;
+  margin-right: 6px;
+}
+
+.card .row-3 {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.card .row-3-1 {
+  display: flex;
+}
+
+.card .row-3 a {
+  margin-right: 6px;
+}
+
+.card .rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 27px;
+
+  font-weight: 400;
+  color: #666666;
+
+  background-color: #f2f2f2;
+}
+
+/* логика загаловка карточки */
+.name-hotel {
+  color: #000000;
+}
+
+.name-hotel:hover {
+  color: #81b3d2;
+}
+
+.name-hotel:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* кнопки карточки товара*/
+.button-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.button-booking {
+  width: 142px;
+  height: 27px;
+
+  color: #ffffff;
+
+  background-color: #766357;
+}
+
+.button-booking:hover {
+  background-color: #604e43;
+}
+
+.button-booking:active {
+  color: rgba(255, 255, 255, 0.2);
+
+  background-color: #503e33;
+}
+
+.button-description {
+  width: 110px;
+  height: 27px;
+
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.button-description:hover {
+  background-color: #669ec0;
+}
+
+.button-description:active {
+  color: rgba(255, 255, 255, 0.2);
+
+  background-color: #5496bd;
+}
+
 /* buttons */
 
 .button {
@@ -410,20 +552,6 @@ a {
   line-height: 21px;
   text-align: center;
   color: var(--white-color);
-}
-
-.button-booking {
-  width: 142px;
-  height: 27px;
-
-  background-color: var(--brown-color);
-}
-
-.button-description {
-  width: 110px;
-  height: 27px;
-
-  background: var(--blue-color) ;
 }
 
 .button-filter {
