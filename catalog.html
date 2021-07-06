@@ -109,15 +109,15 @@
           <ul class="general-list filter-up-duwn">
             <li>
               <a href="#">
-                <svg width="11" height="10" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 0L0 10h11L5.5 0z" />
+                <svg width="11" height="10" fill="#" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0L0 10h11L5.5 0z" fill="#"/>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#">
-                <svg width="11" height="10" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 10L0 0h11" />
+                <svg width="11" height="10" fill="#" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0h11" fill="#"/>
                 </svg>
               </a>
             </li>
@@ -197,48 +197,55 @@
     </div>
   </main>
 
-  <footer>
-    <div class="footer-grid">
-      <section class="footer-contaсts">
-        <h2 class="visually-hidden">Контактная информация</h2>
-        <p>
-          <span class="general-title">#visitSEDONA</span>
-          <a class="general-title" href="tel:+78005558628">+7 800 555-86-28</a>
-        </p>
-      </section>
+  <footer class="footer">
 
-      <section class="footer-social">
-        <h2 class="visually-hidden">Наши соцсети</h2>
-        <ul class="general-list">
+    <section class="footer-column-1">
+      <h2 class="visually-hidden">Контактная информация</h2>
+      <div class="footer-contaсts">
+        <div class="general-title">#visitSEDONA</div>
+        <a class="general-title" href="tel:+78005558628">+7 800 555-86-28</a>
+      </div>
+    </section>
+
+    <section class="footer-social">
+      <h2 class="visually-hidden">Наши соцсети</h2>
+        <ul class="general-list footer-column-2">
           <li>
             <a class="social-button" href="https://twitter.com/htmlacademy_ru" target="_blank">
-              <img src="img/social/twitter-icon.svg" width="17" height="17" alt="Мы в twitter">
+              <svg width="17" height="17" fill="#" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.95 1.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 01-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 9.247.374 8.53.448 6.33c.285.328 1.067.536 1.34.472-.703-.241-1.97-3.36-.894-4.952 1.818 1.854 3.735 3.606 7.152 3.773.208-2.293 1.137-3.83 2.904-4.479z"
+                  fill="#" />
+              </svg>
             </a>
           </li>
           <li>
             <a class="social-button" href="https://www.facebook.com/htmlacademy/" target="_blank">
-              <img src="img/social/fb-icon.svg" width="12" height="22" alt="Мы в facebook">
+              <svg width="12" height="22" fill="#" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#" />
+              </svg>
             </a>
           </li>
           <li>
             <a class="social-button" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-              <img src="img/social/youtube-icon.svg" width="20" height="16" alt="Мы в youtube">
+              <svg width="20" height="16" fill="#" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3 0h14c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm3.027 4.002v7.996L15.014 8 6.027 4.002z"
+                  fill="#" />
+              </svg>
             </a>
           </li>
         </ul>
-      </section>
+    </section>
 
-      <section class="footer-copyright">
-        <h2 class="visually-hidden">Разработано</h2>
-        <p>
-          <span>Website by</span>
-          <a href="https://htmlacademy.ru/" target="_blank">
-            <img src="img/content/htmlacademy-logo.svg" width="115" height="33.03" alt="htmlacademy">
-          </a>
-        </p>
-      </section>
+    <div class="footer-column-3">
+      <span>Website by</span>
+      <a href="https://htmlacademy.ru/" target="_blank">
+        <img src="img/content/htmlacademy-logo.svg" width="115" height="33.03" alt="htmlacademy">
+      </a>
     </div>
-  </footer>
+
+</footer>
 
 </body>
 

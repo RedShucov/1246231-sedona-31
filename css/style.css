@@ -242,29 +242,35 @@ a {
 
 /* footer */
 
-.footer-flex {
-  position: absolute;
-  bottom: 0;
-
-  display: flex;
-  justify-content: space-evenly;
+.footer {
+  display: grid;
   align-items: center;
   width: 100%;
-  height: 120px;
+  min-height: 120px;
 
   background: rgba(255, 255, 255, 0.9);
+
+  gap: 190px;
+  grid-template-columns: 1fr min-content 1fr;
 }
 
-.footer-flex .footer-column-1 {
+.footer-main {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer .footer-column-1 {
   display: flex;
-  flex-direction: column;
+  justify-content: end;
 
   text-align: center;
-
-  gap: 9px;
 }
 
-.footer-flex .footer-column-2 {
+.footer .footer-contaсts {
+  padding: 0 16px;
+}
+
+.footer .footer-column-2 {
   display: flex;
   padding: 0;
 
@@ -283,6 +289,14 @@ a {
   fill: #ffffff;
 }
 
+.footer .footer-column-3 {
+  display: flex;
+
+  font-weight: normal;
+
+  gap: 15px;
+}
+
 /* логика social-button-онов */
 
 .social-button:hover {
@@ -293,12 +307,6 @@ a {
   background-color: #5496bd;
 
   fill: rgba(255, 255, 255, 0.3);
-}
-
-.footer-flex .footer-column-3 {
-  display: flex;
-
-  gap: 15px;
 }
 
 /* Стили страницы каталога */
@@ -379,19 +387,19 @@ a {
   display: inline;
 }
 
-.filter-up-duwn {
+.filter-up-duwn path {
   fill: #cacaca;
 }
 
-.filter-up-duwn a:hover {
+.filter-up-duwn path:hover {
   fill: var(--black-color);
 }
 
-.filter-up-duwn a:focus {
+.filter-up-duwn path:focus {
   fill: var(--blue-color) ;
 }
 
-.filter-up-duwn a:active {
+.filter-up-duwn path:active {
   fill: var(--blue-color) ;
 }
 
@@ -451,3 +459,16 @@ a {
 }
 
 /*  */
+.grid-line-prototype {
+  position: absolute;
+
+  display: grid;
+
+  clip: rect(0 0 0 0);
+
+  grid-template-columns: 73px 127px repeat(4, 200px) 127px 73px;
+}
+
+.grid-line-prototype::before {
+  content: "2";
+}
