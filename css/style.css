@@ -3,20 +3,44 @@
   --background-catalog: #47617b;
   /* цвет бэкграунда изображения главной */
   --background-main: #6d869c;
-  /* основной цвет сайта */
+  /* основной цвет шрифта сайта */
   --black-color: #000000;
-  /* основной синий цвет сайта */
+  /* основной белый цвет сайта */
+  --white-color: #ffffff;
+  /* синий цвет */
   --blue-color: #81b3d2;
-  /* цвет кнопок и фокуса */
+  /* синий цвет:hover */
+  --blue-color-hover: #669ec0;
+  /* синий цвет:active */
+  --blue-color-active: #5496bd;
+  /* коричневый цвет / фокуса меню*/
   --brown-color: #766357;
+  /* коричневый цвет:hover */
+  --brown-color-hover: #604e43;
+  /* коричневый цвет:active */
+  --brown-color-active: #503e33;
   /* цвет подзаголовков */
   --grey-color: #333333;
   /* бэкграунд последнего списка преимуществ, так же бэк-граунд сайта */
   --lite-grey-color: #eeeeee;
-  /* основной белый цвет сайта */
-  --white-color: #ffffff;
+  /* цвет filter-up-duwn */
+  --filter-up-down: #cacaca;
+  /* цвет бордера карточек-товара */
+  --border-card-color: #e5e5e5;
+  /* цвет рейтинга карточки товара */
+  --rate-card-color: #666666;
+  /* бэкграунд рейтинга карточки товара */
+  --background-rate-card: #f2f2f2;
+  /* цвет для тени сайта */
+  --shadow: rgba(221, 221, 221, 1);
+  /* цвет футера */
+  --footer-color: rgba(255, 255, 255, 0.9);
   /* прозрачный цвет для формы */
   --white-color-clear: rgba(255, 255, 255, 0);
+  /* полупрозрачный черный */
+  --black-opacity: rgba(0, 0, 0, 0.3);
+  /* button:active */
+  --button-active: rgba(255, 255, 255, 0.3);
 }
 
 /* общие стили */
@@ -51,8 +75,8 @@
   margin: 0 auto;
 
   background-color: var(--white-color);
-  box-shadow: 10px 0 8px -3px rgba(221, 221, 221, 1),
-  -10px 0 8px -3px rgba(221, 221, 221, 1);
+  box-shadow: 10px 0 8px -3px var(--shadow),
+  -10px 0 8px -3px var(--shadow);
 }
 
 .center-inner {
@@ -247,7 +271,7 @@ a {
   width: 100%;
   min-height: 120px;
 
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--footer-color);
 
   gap: 190px;
   grid-template-columns: 1fr min-content 1fr;
@@ -260,7 +284,7 @@ a {
 
 .footer .footer-column-1 {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 
   text-align: center;
 }
@@ -283,9 +307,9 @@ a {
   width: 46px;
   height: 48px;
 
-  background-color: #81b3d2;
+  background-color: var(--blue-color);
 
-  fill: #ffffff;
+  fill: var(--white-color);
 }
 
 .footer .footer-column-3 {
@@ -299,13 +323,13 @@ a {
 /* логика social-button-онов */
 
 .social-button:hover {
-  background-color: #669ec0;
+  background-color: var(--blue-color-hover);
 }
 
 .social-button:active {
-  background-color: #5496bd;
+  background-color: var(--blue-color-active);
 
-  fill: rgba(255, 255, 255, 0.3);
+  fill: var(--button-active);
 }
 
 /* Стили страницы каталога */
@@ -387,7 +411,7 @@ a {
 }
 
 .filter-up-duwn path {
-  fill: #cacaca;
+  fill: var(--filter-up-down);
 }
 
 .filter-up-duwn path:hover {
@@ -405,12 +429,12 @@ a {
 /* карточки товара */
 
 .catalog-item:first-child {
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid var(--border-card-color);
+  border-bottom: 1px solid var(--border-card-color);
 }
 
 .catalog-item {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--border-card-color);
 }
 
 .card {
@@ -480,22 +504,22 @@ a {
   height: 27px;
 
   font-weight: 400;
-  color: #666666;
+  color: var(--rate-card-color);
 
-  background-color: #f2f2f2;
+  background-color: var(--background-rate-card);
 }
 
 /* логика загаловка карточки */
 .name-hotel {
-  color: #000000;
+  color: var(--black-color);
 }
 
 .name-hotel:hover {
-  color: #81b3d2;
+  color: var(--blue-color);
 }
 
 .name-hotel:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--black-opacity);
 }
 
 /* кнопки карточки товара*/
@@ -504,45 +528,45 @@ a {
   justify-content: center;
   align-items: center;
 
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .button-booking {
   width: 142px;
   height: 27px;
 
-  color: #ffffff;
+  color: var(--white-color);
 
-  background-color: #766357;
+  background-color: var(--brown-color);
 }
 
 .button-booking:hover {
-  background-color: #604e43;
+  background-color: var(--brown-color-hover);
 }
 
 .button-booking:active {
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--button-active);
 
-  background-color: #503e33;
+  background-color: var(--brown-color-active);
 }
 
 .button-description {
   width: 110px;
   height: 27px;
 
-  color: #ffffff;
+  color: var(--white-color);
 
-  background-color: #81b3d2;
+  background-color: var(--blue-color);
 }
 
 .button-description:hover {
-  background-color: #669ec0;
+  background-color: var(--blue-color-hover);
 }
 
 .button-description:active {
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--button-active);
 
-  background-color: #5496bd;
+  background-color: var(--blue-color-active);
 }
 
 /* buttons */
