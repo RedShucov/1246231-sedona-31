@@ -3,44 +3,46 @@
   --background-catalog: #47617b;
   /* цвет бэкграунда изображения главной */
   --background-main: #6d869c;
-  /* основной цвет шрифта сайта */
-  --black-color: #000000;
-  /* основной белый цвет сайта */
-  --white-color: #ffffff;
-  /* синий цвет */
-  --blue-color: #81b3d2;
-  /* синий цвет:hover */
-  --blue-color-hover: #669ec0;
-  /* синий цвет:active */
-  --blue-color-active: #5496bd;
-  /* коричневый цвет / фокуса меню*/
-  --brown-color: #766357;
-  /* коричневый цвет:hover */
-  --brown-color-hover: #604e43;
-  /* коричневый цвет:active */
-  --brown-color-active: #503e33;
-  /* цвет подзаголовков */
-  --grey-color: #333333;
-  /* бэкграунд последнего списка преимуществ, так же бэк-граунд сайта */
-  --lite-grey-color: #eeeeee;
-  /* цвет filter-up-duwn */
-  --filter-up-down: #cacaca;
-  /* цвет бордера карточек-товара */
-  --border-card-color: #e5e5e5;
-  /* цвет рейтинга карточки товара */
-  --rate-card-color: #666666;
   /* бэкграунд рейтинга карточки товара */
   --background-rate-card: #f2f2f2;
-  /* цвет для тени сайта */
-  --shadow: rgba(221, 221, 221, 1);
-  /* цвет футера */
-  --footer-color: rgba(255, 255, 255, 0.9);
-  /* прозрачный цвет для формы */
-  --white-color-clear: rgba(255, 255, 255, 0);
+  /* основной цвет шрифта сайта */
+  --black-color: #000000;
   /* полупрозрачный черный */
   --black-opacity: rgba(0, 0, 0, 0.3);
+  /* синий цвет */
+  --blue-color: #81b3d2;
+  /* синий цвет:active */
+  --blue-color-active: #5496bd;
+  /* синий цвет:hover */
+  --blue-color-hover: #669ec0;
+  /* цвет бордера карточек-товара */
+  --border-card-color: #e5e5e5;
+  /* коричневый цвет / фокуса меню*/
+  --brown-color: #766357;
+  /* коричневый цвет:active */
+  --brown-color-active: #503e33;
+  /* коричневый цвет:hover */
+  --brown-color-hover: #604e43;
   /* button:active */
   --button-active: rgba(255, 255, 255, 0.3);
+  /* цвет filter-up-duwn */
+  --filter-up-down: #cacaca;
+  /* цвет футера */
+  --footer-color: rgba(255, 255, 255, 0.9);
+  /* цвет подзаголовков */
+  --grey-color: #333333;
+  /* htmlacademy:active */
+  --htmlacademy-active: #bdbbbc;
+  /* бэкграунд последнего списка преимуществ, так же бэк-граунд сайта */
+  --lite-grey-color: #eeeeee;
+  /* цвет рейтинга карточки товара */
+  --rate-card-color: #666666;
+  /* цвет для тени сайта */
+  --shadow: rgba(221, 221, 221, 1);
+  /* основной белый цвет сайта */
+  --white-color: #ffffff;
+  /* прозрачный цвет для формы */
+  --white-color-clear: rgba(255, 255, 255, 0);
 }
 
 /* общие стили */
@@ -176,6 +178,8 @@ a {
 
 .navigation-item:focus {
   color: var(--brown-color);
+
+  outline: none;
 }
 
 /* Стили главной страницы */
@@ -300,7 +304,7 @@ a {
   gap: 6px;
 }
 
-.social-button {
+.footer .social-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,6 +322,18 @@ a {
   font-weight: normal;
 
   gap: 15px;
+}
+
+.html-academy {
+  fill: var(--black-color);
+}
+
+.html-academy:hover {
+  fill: var(--blue-color);
+}
+
+.html-academy:active {
+  fill: var(--htmlacademy-active);
 }
 
 /* логика social-button-онов */
@@ -394,8 +410,34 @@ a {
   display: inline;
 }
 
-.filter-sorting .filter-sorting-item:first-child {
+.filter-sorting .filter-sorting-item {
+  color: var(--black-opacity);
+
+  border-bottom: 1px dotted var(--blue-color);
+}
+
+/* логика сортировки */
+.filter-sorting .filter-sorting-item:hover {
+  color: var(--blue-color);
+}
+
+.filter-sorting .filter-sorting-item:focus {
+  color: var(--blue-color);
+
+  border: none;
+  outline: none;
+}
+
+.filter-sorting .filter-sorting-item:active {
+  color: var(--black-color);
+
+  border-bottom: none;
+}
+
+.filter-sorting li:first-child {
   margin-right: 40px;
+
+  color: var(--black-color);
 }
 
 .filter-sorting-item {
@@ -448,6 +490,7 @@ a {
 .card h3 {
   margin: 0;
   padding: 0;
+
   font-size: 21px;
   line-height: 26px;
 }
@@ -528,6 +571,7 @@ a {
   justify-content: center;
   align-items: center;
 
+  font-weight: 700;
   color: var(--white-color);
 }
 
