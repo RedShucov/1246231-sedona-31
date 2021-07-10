@@ -11,82 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    .catalog__list {
-      margin: 0;
-      padding: 0;
-    }
-
-    .card {
-      display: flex;
-      align-items: flex-end;
-      margin-top: 17px;
-      margin-bottom: 31px;
-
-    }
-
-    .card__column-1 {
-      margin-top: 13px;
-    }
-
-    .card__column-1 img {
-      display: block;
-    }
-
-    .card__column-2 {
-      margin-left: 29px;
-    }
-
-    .card__column-2 h3 {
-      margin: 0;
-      padding: 0;
-
-      font-size: 21px;
-      line-height: 26px;
-    }
-
-    .card__column-2 .card__type {
-      min-width: 110px;
-      display: inline-block;
-    }
-
-    .card__column-2-row-2 {
-      margin-top: 7px;
-      display: flex;
-      gap: 6px;
-    }
-
-    .card__column-2-row-3 {
-      display: flex;
-      margin-top: 16px;
-      gap: 5px;
-    }
-
-    .card__column-3 {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      width: 635px;
-    }
-
-    .card__column-3 .card__rate {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 110px;
-      height: 27px;
-      margin-top: 46px;
-      font-weight: 400;
-      color: var(--rate-card-color);
-
-      background-color: var(--background-rate-card);
-    }
-  </style>
-
-
-
-
 </head>
 
 <body class="page-body center">
@@ -195,7 +119,7 @@
             <div class="toggle toggle-max"></div>
           </div>
 
-          <button class="button button-filter" type=“submit”>Показать</button>
+          <button class="button-filter" type=“submit”>Показать</button>
         </fieldset>
       </form>
 
@@ -348,15 +272,16 @@
     <section class="footer-column-1">
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="footer-contaсts">
-        <div class="general-title">#visitSEDONA</div>
+        <span class="general-title">#visitSEDONA</span>
         <a class="general-title" href="tel:+78005558628">+7 800 555-86-28</a>
       </div>
     </section>
 
-    <section class="footer-social">
+    <section class="footer-column-2">
       <h2 class="visually-hidden">Наши соцсети</h2>
-      <ul class="general-list footer-column-2">
+      <ul class="footer-social general-list">
         <li>
+          <span class="visually-hidden">Мы в twitter</span>
           <a class="social-button" href="https://twitter.com/htmlacademy_ru" target="_blank">
             <svg width="17" height="17" fill="#" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -366,6 +291,7 @@
           </a>
         </li>
         <li>
+          <span class="visually-hidden">Мы в facebook</span>
           <a class="social-button" href="https://www.facebook.com/htmlacademy/" target="_blank">
             <svg width="12" height="22" fill="#" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#" />
@@ -373,6 +299,7 @@
           </a>
         </li>
         <li>
+          <span class="visually-hidden">Мы в youtube</span>
           <a class="social-button" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
             <svg width="20" height="16" fill="#" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
