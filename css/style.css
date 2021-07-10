@@ -79,8 +79,8 @@
   margin: 0 auto;
 
   background-color: var(--white-color);
-  /* box-shadow: 10px 0 8px -3px var(--shadow),
-  -10px 0 8px -3px var(--shadow); */
+  box-shadow: 10px 0 8px -3px var(--shadow),
+  -10px 0 8px -3px var(--shadow);
 }
 
 .center-inner {
@@ -218,6 +218,9 @@ a {
 .features {
   font-weight: 400;
   line-height: 21px;
+
+  position: relative;
+  z-index: 9999;
 }
 
 .extra-features {
@@ -312,12 +315,21 @@ a {
 
 .hotel-search {
   position: relative;
-
-  margin-top: 56px;
-
   font-weight: 400;
   line-height: 24px;
   text-align: center;
+}
+
+.hotel-search__wrap {
+  height: 291px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: end;
+
+position: relative;
+z-index: 9999;
+background-color: white;
 }
 
 .hotel-search .catch-heading {
@@ -329,7 +341,7 @@ a {
 
 .hotel-search p {
   margin: 0;
-  margin-top: 26px;
+  margin-top: 34px;
 }
 
 .hotel-search_button-search {
@@ -360,8 +372,10 @@ a {
 }
 
 .hotel-search__pop-up {
+  display: block;
   position: absolute;
-  top: 233px;
+  z-index: 0;
+  top: 290px;
   left: 50%;
 
   width: 458px;
@@ -370,7 +384,15 @@ a {
 
   background-color: var(--white-color);
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  transform: translateX(-50%);
+  transition: all 1.5s;
+  transform:translate(-50%,-0%);
+}
+
+.js-active {
+  z-index: 0;
+  display: block;
+  position: absolute;
+  transform:translate(-50%,-120%);
 }
 
 .pop-up__form {
@@ -637,7 +659,7 @@ input[value] {
   grid-template-columns: max-content max-content 1fr;
 }
 
-.filtration-item {
+.filtration__group {
   margin: 0;
   margin-top: 26px;
   margin-right: 119px;
@@ -646,11 +668,11 @@ input[value] {
   border: none;
 }
 
-.filtration-item:last-child {
+.filtration__group:last-child {
   margin-right: 0;
 }
 
-.filtration-item:last-child {
+.filtration__group:last-child {
   justify-self: end;
 }
 
@@ -661,9 +683,21 @@ input[value] {
   font-size: 16px;
 }
 
+.filtration__item {
+  margin-top: 23px;
+}
+
+.filtration__item li {
+  margin-bottom: 26px;
+}
+
+.filtration__item li:nth-child(2) {
+  margin-bottom: 25px;
+}
+
 .check {
   margin-bottom: 30px;
-  padding-left: 39px;
+  padding-left: 38px;
 }
 
 .check__input {
@@ -679,7 +713,7 @@ input[value] {
 
   width: 23px;
   height: 23px;
-  margin-left: -39px;
+  margin-left: -40px;
 
   background-image: url(/img/decor/checkbox-off.svg);
   cursor: pointer;
@@ -701,7 +735,8 @@ input[value] {
   background-image: url(/img/decor/checkbox-on-dis.svg);
 }
 
-.filtration-item-price .price-controls {
+.filtration__group-price .price-controls {
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -722,6 +757,14 @@ input[value] {
 
 .price-controls__block {
   justify-self: center;
+}
+
+.price-controls__block:first-child {
+  margin-left: 25px;
+}
+
+.price-controls__block:last-child {
+  margin-left: 5px;
 }
 
 .price-controls .price-value {
@@ -798,9 +841,9 @@ input[value] {
 }
 
 .button-filter {
-  width: 133px;
-  height: 32px;
-  margin-left: 98px;
+  width: 137px;
+  height: 37px;
+  margin-left: 83px;
 
   font-weight: 400;
   text-transform: inherit;
@@ -831,14 +874,18 @@ input[value] {
   height: 86px;
 }
 
-.filter-catalog-block .column-1 {
+.filter-catalog-block .filter-catalog__column-1 {
   display: flex;
   align-items: center;
 }
 
+.filter-catalog__column-1 h3 {
+  margin-bottom: 26px;
+}
+
 .filter-sorting {
   padding-left: 46px;
-
+  margin-bottom: 19px;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -873,7 +920,7 @@ input[value] {
 }
 
 .filter-sorting li:first-child {
-  margin-right: 40px;
+  margin-right: 37px;
 
   color: var(--black-color);
 }
@@ -886,8 +933,16 @@ input[value] {
 
 /* filter up-down */
 
+.filter-up-duwn {
+  margin-bottom: 11px;
+}
+
 .filter-up-duwn li {
   display: inline;
+}
+
+.filter-up-duwn li:first-child {
+  margin-right: 8px;
 }
 
 .filter-up-duwn path {
@@ -917,78 +972,14 @@ input[value] {
   border-bottom: 1px solid var(--border-card-color);
 }
 
-.card {
-  display: flex;
-  align-items: flex-end;
-  padding-top: 21px;
-  padding-bottom: 30px;
-  /* padding: 30px 0; */
-}
 
-.card h3 {
-  margin: 0;
-  padding: 0;
 
-  font-size: 21px;
-  line-height: 26px;
-}
 
-.card-image {
-  display: block;
-}
 
-.card .column-2 {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-left: 30px;
-}
 
-.card .row-1 {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
 
-.card .row-2 {
-  display: flex;
-  width: 100%;
-  margin-top: 7px;
-  margin-bottom: 18.5px;
-}
 
-.card .row-2 span {
-  width: 110px;
-  margin-right: 6px;
-}
 
-.card .row-3 {
-  display: flex;
-  justify-content: space-between;
-  align-self: flex-end;
-  width: 100%;
-}
-
-.card .row-3-1 {
-  display: flex;
-}
-
-.card .row-3 a {
-  margin-right: 6px;
-}
-
-.card .rate {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 110px;
-  height: 27px;
-
-  font-weight: 400;
-  color: var(--rate-card-color);
-
-  background-color: var(--background-rate-card);
-}
 
 /* логика загаловка карточки */
 .name-hotel {
@@ -1004,7 +995,7 @@ input[value] {
 }
 
 /* кнопки карточки товара*/
-.button-card {
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1089,3 +1080,74 @@ input[value] {
   content: "2";
 }
 /*  */
+
+
+
+
+
+
+
+/* .card h3 {
+  margin: 0;
+  padding: 0;
+
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.card-image {
+  display: block;
+}
+
+.card .column-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.card .row-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card .row-2 {
+  display: flex;
+  width: 100%;
+  margin-top: 7px;
+  margin-bottom: 18.5px;
+}
+
+.card .row-2 span {
+  width: 110px;
+  margin-right: 6px;
+}
+
+.card .row-3 {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.card .row-3-1 {
+  display: flex;
+}
+
+.card .row-3 a {
+  margin-right: 6px;
+}
+
+.card .rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 27px;
+
+  font-weight: 400;
+  color: var(--rate-card-color);
+
+  background-color: var(--background-rate-card);
+} */
