@@ -39,50 +39,86 @@
     <section class="filter-check-block">
       <h2 class="visually-hidden">Фильтр жилья</h2>
 
-      <form class="filtration-form" action="https://echo.htmlacademy.ru/" method="POST">
-        <fieldset>
+      <form class="filtration-form center-inner" action="https://echo.htmlacademy.ru/" method="POST">
+        <fieldset class="filtration-item">
           <legend>ИНФРАСТРУКТУРА:</legend>
           <ul class="general-list">
-            <li>
-              <input type="checkbox" name="pool" id="filter-pool" checked>
-              <label for="filter-pool">БАССЕЙН</label>
+            <li class="check">
+              <label>
+                <input class="check__input" type="checkbox" name="pool" id="filter-pool" checked>
+                <span class="check__box"></span>
+                <span>БАССЕЙН</span>
+              </label>
             </li>
-            <li>
-              <input type="checkbox" name="parking" id="filter-parking">
-              <label for="filter-parking">ПАРКОВКА</label>
+
+            <li class="check">
+              <label>
+                <input class="check__input" type="checkbox" name="parking" id="filter-parking">
+                <span class="check__box"></span>
+                <span>ПАРКОВКА</span>
+              </label>
             </li>
-            <li>
-              <input type="checkbox" name="wifi" id="filter-wifi">
-              <label for="filter-wifi">WI-FI</label>
+
+            <li class="check">
+              <label>
+                <input class="check__input" type="checkbox" name="wifi" id="filter-wifi">
+                <span class="check__box"></span>
+                <span>WI-FI</span>
+              </label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="filtration-item">
           <legend>ТИП ЖИЛЬЯ:</legend>
           <ul class="general-list">
-            <li>
-              <input type="checkbox" name="hotel" id="filter-hotel" checked>
-              <label for="filter-hotel">ГОСТИНИЦА</label>
+            <li class="check">
+              <label>
+                <input class="check__input" type="checkbox" name="hotel" id="filter-hotel" checked>
+                <span class="check__box"></span>
+                <span>ГОСТИНИЦА</span>
+              </label>
             </li>
-            <li>
-              <input type="checkbox" name="motel" id="filter-motel" checked>
-              <label for="filter-motel">МОТЕЛЬ</label>
+
+            <li class="check">
+              <label>
+                <input class="check__input" type="checkbox" name="motel" id="filter-motel" checked>
+                <span class="check__box"></span>
+                <span>МОТЕЛЬ</span>
+              </label>
             </li>
-            <li>
-              <input type="checkbox" name="apartments" id="filter-apartments" checked>
-              <label for="filter-apartments">АППАРТАМЕНТЫ</label>
+
+            <li class="check">
+              <label>
+                <input class="check__input" type="checkbox" name="apartments" id="filter-apartments" checked>
+                <span class="check__box"></span>
+                <span>АППАРТАМЕНТЫ</span>
+              </label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="filter-range">
-          <legend>стоимость в сутки, &#8381;</legend>
-          <ul class="general-list">
-            <li><input type="number" name="min-price" placeholder="от 0"></li>
-            <li><input type="number" name="max-price" placeholder="до 3000"></li>
-            <li><input type="range" min="1" max="3000"></li>
-          </ul>
+        <fieldset class="filtration-item filtration-item-price">
+          <legend>Стоимость в сутки, ₽:</legend>
+          <div class="price-controls">
+            <div class="price-controls__block">
+              <label for="1">От</label>
+              <input class="price-value" id="1" type="number" name="min-price" value="0">
+            </div>
+            <div class="price-controls__block">
+              <label for="2">До</label>
+              <input class="price-value" id="2" type="number" name="max-price" value="3000">
+            </div>
+          </div>
+
+          <div class="range-controls">
+            <div class="rage-scale">
+              <div class="bar"></div>
+            </div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+
           <button class="button button-filter" type=“submit”>Показать</button>
         </fieldset>
       </form>
