@@ -25,7 +25,7 @@
   --brown-color-hover: #604e43;
   /* button:active */
   --button-active: rgba(255, 255, 255, 0.3);
-  /* цвет filter-up-duwn */
+  /* цвет filter-up-down */
   --filter-up-down: #cacaca;
   /* цвет футера */
   --footer-color: rgba(255, 255, 255, 0.9);
@@ -966,31 +966,31 @@ a {
 
 /* filter up-down */
 
-.filter-up-duwn {
+.filter-up-down {
   margin-bottom: 11px;
 }
 
-.filter-up-duwn li {
+.filter-up-down li {
   display: inline;
 }
 
-.filter-up-duwn li:first-child {
+.filter-up-down li:first-child {
   margin-right: 8px;
 }
 
-.filter-up-duwn path {
+.filter-up-down path {
   fill: var(--filter-up-down);
 }
 
-.filter-up-duwn path:hover {
+.filter-up-down__item:hover path {
   fill: var(--black-color);
 }
 
-.filter-up-duwn path:focus {
+.filter-up-down__item:focus path {
   fill: var(--blue-color) ;
 }
 
-.filter-up-duwn path:active {
+.filter-up-down__item:active path{
   fill: var(--blue-color) ;
 }
 
