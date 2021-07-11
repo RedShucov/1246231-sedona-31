@@ -1177,3 +1177,18 @@ a {
   content: "2";
 }
 /*  */
+
+.hotel-search__map {
+  position: relative;
+}
+
+.hotel-search__map-main {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.js-active-map {
+  display: block;
+}

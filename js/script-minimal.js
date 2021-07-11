@@ -1,0 +1,1 @@
+document.querySelector(".hotel-search__pop-up").classList.add("js-active"),document.querySelector(".hotel-search__map-main").classList.add("js-active-map");let hidden=document.querySelector(".hotel-search__pop-up"),showButton=document.querySelector(".hotel-search_button-search");showButton.onclick=function(){hidden.classList.toggle("js-active")};
