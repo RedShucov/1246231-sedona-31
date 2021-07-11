@@ -410,7 +410,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .pop-up__form .pop-up__form-row {
@@ -442,7 +442,8 @@ a {
 }
 
 .pop-up__form-row .pop-up__form-date-visit {
-  padding-left: 12px;
+  padding-bottom: 2px;
+  padding-left: 13px;
 }
 
 .pop-up__form-row .pop-up__form-date-visit {
@@ -463,13 +464,14 @@ a {
 }
 
 .button_ic-calendar {
-  border: 0px;
-  padding: 0px;
   width: 40px;
-  height:38px;
+  height: 38px;
+  padding: 0;
+
+  border: 0;
 }
 
-.ic-calendar{
+.ic-calendar {
   cursor: pointer;
 
   fill: var(--grey-icon);
