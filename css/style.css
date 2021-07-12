@@ -295,8 +295,8 @@ a {
 
 .additional-features__item {
   max-width: 300px;
-  margin-top: 56px;
   padding: 0 50px;
+  margin-top: 56px;
 }
 
 .additional-features__item,
@@ -389,7 +389,7 @@ a {
   align-items: center;
   min-height: 291px;
 
-  background-color: white;
+  background-color: var(--white-color);
 }
 
 .hotel-search__wrap-text {
@@ -1179,7 +1179,7 @@ a {
 .card__column-2-row-3 {
   display: flex;
   margin-top: 16px;
-
+  flex-wrap: wrap;
   gap: 5px;
 }
 
