@@ -413,18 +413,14 @@ a {
 
 .hotel-search__map-spy {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hotel-search__map-main {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
-}
-
-.js-active-map {
-  z-index: 3;
 }
 
 .hotel-search__pop-up {
@@ -519,7 +515,7 @@ a {
   display: flex;
 }
 
-.button__ic-calendar {
+.button__icon-calendar {
   width: 40px;
   height: 38px;
   padding: 0;
@@ -527,21 +523,21 @@ a {
   border: 0;
 }
 
-.ic-calendar {
+.icon-calendar {
   cursor: pointer;
 
   fill: var(--grey-icon);
 }
 
-.ic-calendar:hover {
+.icon-calendar:hover {
   fill: var(--black-color);
 }
 
-.ic-calendar:active {
+.icon-calendar:active {
   fill: var(--blue-color);
 }
 
-.button__ic-calendar:focus path {
+.button__icon-calendar:focus path {
   fill: var(--blue-color);
 }
 
@@ -589,19 +585,19 @@ a {
   cursor: pointer;
 }
 
-.switch .ic-add-down {
+.switch .icon-add-down {
   fill: var(--grey-icon);
 }
 
-.switch__button:hover .ic-add-down {
+.switch__button:hover .icon-add-down {
   fill: var(--black-color);
 }
 
-.switch__button:active .ic-add-down {
+.switch__button:active .icon-add-down {
   fill: var(--blue-color);
 }
 
-.switch__button:focus .ic-add-down {
+.switch__button:focus .icon-add-down {
   fill: var(--blue-color);
 }
 
@@ -629,6 +625,10 @@ a {
 .pop-up__button:active {
   color: var(--button-active);
 
+  background-color: var(--blue-color-active);
+}
+
+.pop-up__button:focus {
   background-color: var(--blue-color-active);
 }
 
