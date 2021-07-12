@@ -70,6 +70,7 @@
   font-family: "PT Sans", "Arial", sans-serif;
   color: var(--grey-color);
   text-transform: uppercase;
+  word-wrap: break-word;
 
   grid-template-rows: min-content 1fr min-content;
 }
@@ -116,6 +117,7 @@ a {
   position: relative;
 
   display: flex;
+  flex-wrap: wrap;
   min-height: 56px;
 }
 
@@ -209,7 +211,10 @@ a {
 }
 
 .promo__text {
+  width: 500px;
   margin-top: 42px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .promo__text .general-title {
@@ -289,6 +294,8 @@ a {
 }
 
 .additional-features__item {
+  max-width: 300px;
+  margin-top: 56px;
   padding: 0 50px;
 }
 
@@ -303,12 +310,11 @@ a {
 
 .additional-features__list {
   display: grid;
-  align-items: end;
+  align-items: baseline;
   margin: 0;
   padding: 0;
 
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 330px;
 }
 
 .additional-features__item h3 {
@@ -381,12 +387,20 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 291px;
+  min-height: 291px;
 
   background-color: white;
 }
 
+.hotel-search__wrap-text {
+  width: 500px;
+  margin-top: 58px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .hotel-search .catch-heading {
+  display: block;
   margin-right: 12px;
   margin-bottom: 33px;
 
@@ -399,15 +413,14 @@ a {
 }
 
 .hotel-search_button-search {
-  width: 568px;
-  height: 86px;
-  margin-top: 44px;
-  padding: 0;
+  margin-top: 43px;
+  padding: 32px 139px;
 
   font-size: 21px;
   line-height: 26px;
 
   background-color: var(--brown-color);
+  border: 1px solid;
   border: 0;
 }
 
@@ -453,8 +466,9 @@ a {
 
   display: block;
   width: 458px;
-  height: 285px;
+  min-height: 285px;
   padding: 55px;
+  padding-top: 56px;
 
   background-color: var(--white-color);
   box-shadow: 0 7px 15px var(--shadow-popup);
@@ -473,8 +487,6 @@ a {
 }
 
 .pop-up__form {
-  display: flex;
-  flex-direction: column;
   height: 100%;
 }
 
@@ -484,7 +496,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
 .pop-up__form .pop-up__form-row {
@@ -628,8 +640,7 @@ a {
 }
 
 .pop-up__button {
-  width: 458px;
-  height: 58px;
+  padding: 19px 196px;
 
   font-weight: inherit;
   font-size: 21px;
@@ -985,9 +996,8 @@ a {
 }
 
 .button-filter {
-  width: 137px;
-  height: 37px;
   margin-left: 83px;
+  padding: 9px 33px;
 
   font-weight: 400;
   color: var(--white-color);
@@ -1130,7 +1140,7 @@ a {
 .card {
   display: flex;
   align-items: flex-end;
-  margin-top: 17px;
+  margin-top: 16px;
   margin-bottom: 31px;
 }
 
@@ -1143,6 +1153,7 @@ a {
 }
 
 .card__column-2 {
+  max-width: 300px;
   margin-left: 29px;
 }
 
@@ -1218,8 +1229,7 @@ a {
 }
 
 .button-booking {
-  width: 142px;
-  height: 27px;
+  padding: 3px 17px;
 
   color: var(--white-color);
 
@@ -1238,8 +1248,7 @@ a {
 }
 
 .button-description {
-  width: 110px;
-  height: 27px;
+  padding: 3px 17px;
 
   color: var(--white-color);
 
