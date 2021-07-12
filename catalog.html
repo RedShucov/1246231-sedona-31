@@ -9,8 +9,8 @@
   <link rel="apple-touch-icon" href="img/favicon/180.png" type="image/x-icon">
   <link rel="manifest" href="manifest.webmanifest.json">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body center">
@@ -19,8 +19,8 @@
 
     <div class="center-inner">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
-          <img src="img/content/sedona-logo.svg" width="138" height="70" alt="На главную">
+        <a class="main-header-logo" href="index.html" tabindex="0">
+          <img src="img/content/sedona-logo.svg" width="138" height="70" alt="Переход на главную страницу">
         </a>
         <ul class="general-list site-navigation site-navigation-current">
           <li><a class="navigation-item" href="#">Информация</a></li>
@@ -39,7 +39,7 @@
     <section class="filter-check-block">
       <h2 class="visually-hidden">Фильтр жилья</h2>
 
-      <form class="filtration-form center-inner" action="https://echo.htmlacademy.ru/" method="POST">
+      <form class="filtration-form center-inner" action="https://echo.htmlacademy.ru/" method="POST" target="_blank">
         <fieldset class="filtration__group">
           <legend>ИНФРАСТРУКТУРА:</legend>
           <ul class="filtration__item general-list">
@@ -115,11 +115,11 @@
             <div class="rage-scale">
               <div class="bar"></div>
             </div>
-            <div class="toggle toggle-min"></div>
-            <div class="toggle toggle-max"></div>
+            <div class="toggle toggle-min" tabindex="0" aria-label="увеличение диапазона сортировки"></div>
+            <div class="toggle toggle-max" tabindex="0" aria-label="уменьшение диапазона сортировки"></div>
           </div>
 
-          <button class="button-filter" type="submit">Показать</button>
+          <button class="button-filter" type="submit" aria-label="Отправить выбранные настройки для фильтрации">Показать</button>
         </fieldset>
       </form>
 
@@ -145,14 +145,14 @@
           <ul class="general-list filter-up-down">
             <li>
               <a href="#" class="filter-up-down__item">
-                <svg width="11" height="10" fill="#" xmlns="http://www.w3.org/2000/svg">
+                <svg width="11" height="10" fill="#" xmlns="http://www.w3.org/2000/svg" aria-label="сортировка по возростанию">
                   <path d="M5.5 0L0 10h11L5.5 0z" fill="#" />
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" class="filter-up-down__item">
-                <svg width="11" height="10" fill="#" xmlns="http://www.w3.org/2000/svg">
+                <svg width="11" height="10" fill="#" xmlns="http://www.w3.org/2000/svg" aria-label="сортировка по убыванию">
                   <path d="M5.5 10L0 0h11" fill="#" />
                 </svg>
               </a>
@@ -174,7 +174,9 @@
               </div>
 
               <div class="card__column-2">
-                <h3>Amara Resort & Spa</h3>
+                <a class="name-hotel" href="#">
+                  <h3>Amara Resort & Spa</h3>
+                </a>
                 <div class="card__column-2-row-2">
                   <span class="card__type">Гостиница</span>
                   <span>От 4000 ₽</span>
@@ -206,7 +208,9 @@
               </div>
 
               <div class="card__column-2">
-                <h3>Desert Quail Inna</h3>
+                <a class="name-hotel" href="#">
+                  <h3>Desert Quail Inna</h3>
+                </a>
                 <div class="card__column-2-row-2">
                   <span class="card__type">Мотель</span>
                   <span>От 3000 ₽</span>
@@ -238,7 +242,9 @@
               </div>
 
               <div class="card__column-2">
-                <h3>Villas at Poco Diablo</h3>
+                <a class="name-hotel" href="#">
+                  <h3>Villas at Poco Diablo</h3>
+                </a>
                 <div class="card__column-2-row-2">
                   <span class="card__type">Апартаменты</span>
                   <span>От 2000 ₽</span>
@@ -273,7 +279,7 @@
       <h2 class="visually-hidden">Контактная информация</h2>
       <div class="footer-contaсts">
         <span class="general-title">#visitSEDONA</span>
-        <a class="general-title" href="tel:+78005558628">+7 800 555-86-28</a>
+        <a class="general-title phone-number" href="tel:+78005558628">+7 800 555-86-28</a>
       </div>
     </section>
 
