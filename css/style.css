@@ -33,6 +33,8 @@
   --grey-color: #333333;
   /* цвет неактивных иконок формы */
   --grey-icon: #a9a9a9;
+  /* бэкграунд рейтинга карточки товара */
+  --hover-rate-card: #ebebeb;
   /* htmlacademy:active */
   --htmlacademy-active: #bdbbbc;
   /* бэкграунд последнего списка преимуществ, так же бэк-граунд сайта */
@@ -279,6 +281,7 @@ a {
 
 .extra-features__itemt-right h3 {
   margin-top: 47px;
+
   font-weight: 700;
   color: var(--white-color);
 }
@@ -289,8 +292,8 @@ a {
 
 .additional-features__item {
   max-width: 300px;
-  padding: 0 50px;
   margin-top: 56px;
+  padding: 0 50px;
 }
 
 .additional-features__item,
@@ -406,7 +409,7 @@ a {
   margin: 0;
 }
 
-.hotel-search_button-search {
+.hotel-search__show-button {
   margin-top: 43px;
   padding: 32px 139px;
 
@@ -418,15 +421,15 @@ a {
   border: 0;
 }
 
-.hotel-search_button-search:hover {
+.hotel-search__show-button:hover {
   background-color: var(--brown-color-hover);
 }
 
-.hotel-search_button-search:focus {
+.hotel-search__show-button:focus {
   background-color: var(--brown-color-hover);
 }
 
-.hotel-search_button-search:active {
+.hotel-search__show-button:active {
   color: var(--button-active);
 
   background-color: var(--brown-color-active);
@@ -466,18 +469,23 @@ a {
 
   background-color: var(--white-color);
   box-shadow: 0 7px 15px var(--shadow-popup);
-  transform: translate(-50%,-0%);
+  margin-left: -284px;
 
   transition: all 1.5s;
 }
 
-.js-active {
+/* popup-show */
+.popup-show {
   position: absolute;
   z-index: 0;
 
   display: block;
 
-  transform: translate(-50%,-140%);
+  transform: translateY(-120%);
+}
+
+.popup-error {
+  animation: shake 0.6s;
 }
 
 .pop-up__form {
@@ -521,15 +529,33 @@ a {
   outline: none;
 }
 
+.input-module {
+  display: flex;
+
+  background-color: var(--background-rate-card);
+}
+
+.input-module input:hover,
+.switch__сount:hover {
+  background-color: var(--hover-rate-card);
+}
+
+.input-module input:focus,
+.switch__сount:focus {
+  background-color: var(--white-color);
+  border: 2px solid var(--background-rate-card);
+}
+
 .pop-up__form-row .pop-up__form-date-visit {
-  padding-bottom: 2px;
-  padding-left: 13px;
+  padding-left: 11px;
 }
 
 .pop-up__form-row .pop-up__form-date-visit {
   box-sizing: border-box;
   width: 306px;
   height: 38px;
+
+  border: 2px solid var(--background-rate-card);
 }
 
 .switch__сount::-webkit-outer-spin-button,
@@ -537,10 +563,6 @@ a {
   margin: 0;
 
   -webkit-appearance: none;
-}
-
-.input-module {
-  display: flex;
 }
 
 .button__icon-calendar {
@@ -572,8 +594,6 @@ a {
 .switch {
   display: flex;
   width: min-content;
-
-  background: var(--background-rate-card);
 }
 
 .pop-up__form-row .adult {
@@ -589,6 +609,7 @@ a {
 }
 
 .switch__сount {
+  box-sizing: border-box;
   width: 34px;
   height: 38px;
   padding: 0;
@@ -865,16 +886,16 @@ a {
 
 .check__input:checked:focus + .check__box {
   background-image: url(../img/decor/checkbox-on.svg);
-  outline: 3px solid var(--blue-color);
   border-radius: 10%;
+  outline: 3px solid var(--blue-color);
 }
 
 /* off */
 
 .check__input:focus + .check__box {
   background-image: url(../img/decor/checkbox-off.svg);
-  outline: 3px solid var(--blue-color);
   border-radius: 10%;
+  outline: 3px solid var(--blue-color);
 }
 
 /* disabled */
@@ -1177,6 +1198,7 @@ a {
 .card__column-2-row-3 {
   display: flex;
   margin-top: 16px;
+
   gap: 5px;
 }
 
@@ -1278,13 +1300,38 @@ a {
 
 .visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
   overflow: hidden;
+
   border: 0;
-  clip: rect(0 0 0 0)
+
+  clip: rect(0 0 0 0);
 }
 
 /*  */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
